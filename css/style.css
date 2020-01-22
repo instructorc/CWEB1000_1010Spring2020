@@ -1,0 +1,8 @@
+body{
+    background-image: url(https://content.mlb.com/assets/images/3/6/4/312364364/cuts/1680x900/cut.jpg);
+}
+/**This is a style rule that centers the website by applying a width and margin**/
+#container{
+    margin: auto;
+    width: 1000px;
+}
