@@ -17,11 +17,39 @@
                 font-size: 3em;
             }
 
+            #footer{
+                height: 90px;
+                background-image: url(img/dunwoodyfooterlogo.png);
+                background-size: 100%;
+            }
+
+            #header{
+                text-align: center;
+            }
+
+            img[src*="filestructure"]{
+                display: block;
+                margin: auto;
+            }
+
+            input[type="text"] {
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+            }
+
+            #questions {
+                margin-top: 18px;
+                margin-left: 16px;
+                margin-bottom: 26px;
+            }
+
+
         </style>
     </head>
     <body>
         <div id="container">
-            <header>
+            <header id="header">
                 <h1 class="box">Course: CWEB1010 - Introduction to Web Development</h1>
                 <h1 class="box">Utilizing and Understanding Relative and Absolute File Paths</h1>
                 <!--Inline CSS [element or tag specific]-->
@@ -32,14 +60,16 @@
             <p>Directions: This in-class assignment will focus on understanding relative and absolute file paths.  Please use the diagram below to fill in the correct file path for each of the 5 questions</p>
             <a href="http://fire.org/downloads/farsite/WebHelp/tutorial/tutorial4_file_structure.htm" target="_blank"><img src="img/filestructure.PNG" alt="image of file structure"></a>
             <hr>
-            <ol>
-                <li>What is the <a href="http://fire.org/downloads/farsite/WebHelp/tutorial/tutorial4_file_structure.htm">relative file</a> path to bg.jpg from index.html?<input type="text" size="30"></li>
-                <li>What is the relative file path to logo.png file from index.html file?<input type="text" size="30"></li>
-                <li>What is the relative file path to minimize.js from index.html file<input type="text" size="30"></li>
-                <li>What is the relative file path to style.css from index.html?<input type="text" size="30"></li>
-                <li>What is the relative file path to banner.jpg from contact.html file?<input type="text" size="30"></li>
-            </ol>
-            <footer>
+            <div id="questions">
+                <ol>
+                    <li>What is the relative file path to bg.jpg from index.html?<input type="text" size="30"></li>
+                    <li>What is the relative file path to logo.png file from index.html file?<input type="text" size="30"></li>
+                    <li>What is the relative file path to minimize.js from index.html file<input type="text" size="30"></li>
+                    <li>What is the relative file path to style.css from index.html?<input type="text" size="30"></li>
+                    <li>What is the relative file path to banner.jpg from contact.html file?<input type="text" size="30"></li>
+                </ol>
+            </div>
+            <footer id="footer">
 
 
 
