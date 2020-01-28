@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'calibril';
+    src: url('../fonts/calibril.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/calibril.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/calibril.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/calibril.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/calibril.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/calibril.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
+
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -20,12 +32,12 @@ time, mark, audio, video {
 }
 
 body {
- line-height:1;
+    font-family: 'calibril';
+    line-height:1;
 }
 
 
-body{
-}
+
 /**This is a style rule that centers the website by applying a width and margin**/
 #container{
     margin: auto;
