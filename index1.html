@@ -22,6 +22,20 @@
                 
             }
 
+            /**CSS style rules that allows for parenthesis after the number**/
+            ol{
+                counter-reset: list;
+            }
+
+            ol >li{
+                list-style: none;
+            }
+
+            ol >li:before{
+                content: counter(list)")  ";
+                counter-increment: list;
+            }
+
 
 
 
