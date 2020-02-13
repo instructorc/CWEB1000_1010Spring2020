@@ -13,6 +13,42 @@
 
         <!--Internal CSS-->
         <style>
+
+            @font-face {
+            font-family: 'calibril';
+            src: url('fonts/calibril.eot'); /* IE9 Compat Modes */
+            src: url('fonts/calibril.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('fonts/calibril.woff2') format('woff2'), /* Super Modern Browsers */
+                url('fonts/calibril.woff') format('woff'), /* Pretty Modern Browsers */
+                url('fonts/calibril.ttf')  format('truetype'), /* Safari, Android, iOS */
+                url('fonts/calibril.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
+
+            html, body, div, span, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            abbr, address, cite, code,
+            del, dfn, em, img, ins, kbd, q, samp,
+            small, strong, sub, sup, var,
+            b, i,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section, summary,
+            time, mark, audio, video {
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
+            }
+
+            body {
+                font-family: 'calibril';
+                line-height:1;
+            }
     
 
             #container{
@@ -20,6 +56,18 @@
                 margin: auto;
                
                 
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 1.6em;
+                line-height: 1.2em;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 1.3em;
+                font-weight: 100;
             }
 
             /**CSS style rules that allows for parenthesis after the number**/
@@ -46,11 +94,11 @@
         
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <header>
                 <h1>COURSE: CWEB1000 - Introduction to Web Design</h1>
                 <h1>Utilizing and Understanding Relative and Absolute File Paths</h1>
-                <h1 style="text-transform: upppercase;">Term Spring 2020</h1>
+                <h1 style="text-transform: uppercase;">Term Spring 2020</h1>
                 <h2>Alloted Time: 10 minutes | Total points: 0 points | 5 questions</h2>
             </header>
             <p>Directions: This is-class assignment will focus on understanding relative and absolute file paths.  Please use the diagram below to fill in the correct file path for each of the 5 questions below.</p>
