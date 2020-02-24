@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+       <head>
+		<!--The head tag communicates information about the html document -->
+        <title>CSS Flexbox </title>
+        <!--Internal CSS-->
+        <style>
+
+            #container{
+                display: flex;
+                width: 80%;
+                margin: auto;
+                border: 3px solid orangered;
+
+            }
+            .box{
+                flex: 1 0 auto;
+                height: 325px;
+                margin: 10px;
+                border: 3px solid green;
+            }
+
+        </style>
+	</head>
+	<body>
+        <div id="container">
+            <aside class="box"> #1 </aside>
+            <aside class="box"> #2 </aside>
+            <aside class="box"> #3 </aside>
+        </div><!--End of container div tag-->
+	</body>
+</html>
