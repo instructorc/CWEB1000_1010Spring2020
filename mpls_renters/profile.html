@@ -9,14 +9,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Internal CSS-->
         <style>
+            html, body, div, span, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            abbr, address, cite, code,
+            del, dfn, em, img, ins, kbd, q, samp,
+            small, strong, sub, sup, var,
+            b, i,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section, summary,
+            time, mark, audio, video {
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
+            }
+
+            body {
+                line-height:1;
+            }
+            #profile_top_section{
+                width: 100%;
+                height: 300px;
+                background-image: url(img/profile_bg_crop.jpg);
+                background-size: 100%;
+            }
+
+            #profile_grid_container{
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: .7fr .7fr 3fr 1fr;
+                height: 800px;
+                width: 90%;
+                margin: auto;
+            }
+
+            #profile_nav{
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                box-shadow: 3px 3px 10px #333;
+                height: 100px;
+            }
+
+            #profile_content_header{
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                box-shadow: 3px 3px 10px #333;
+                height: 100px;
+            }
+
+            #profile_content_flexcontainer{
+                display: flex;
+                flex-wrap: wrap;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                box-shadow: 3px 3px 10px #333;
+                height: 700px;
+            }
+
+            .profile_content{
+                flex: 1 0 300px;
+                box-shadow: 3px 3px 10px #333;
+                height: 700px;
+            }
+            
         
         </style>
     </head>
     <body>
-        <section id="profile_top_section">
+        <div id="profile_top_section">
 
 
-        </section>
+        </div>
+        <!--Implementing CSS Grid-->
+        <div id="profile_grid_container">
+            <!--Grid items total of 4-->
+            <nav id="profile_nav">
+
+            </nav>
+            <section id="profile_content_header">
+
+            </section>
+            <!--Implement flexbox-->
+            <div id="profile_content_flexcontainer">
+                <!--Flex items-->
+                <div class="profile_content offers">
+
+                </div>
+                <div class="profile_content data">
+
+                </div>
+            </div>
+            <div id="tb_graphic_one">
+
+            </div>
+
+        </div>
 
     </body>
 </html>
