@@ -52,12 +52,45 @@
 
             #profile_nav{
                 display: flex;
+                border: 2px solid green;
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 1;
                 grid-row-end: 2;
                 box-shadow: 3px 3px 10px #333;
                 height: 100px;
+            }
+
+            #profile_nav #notification{
+                border: 2px solid red;
+                flex: 1 0 135px;
+            }
+
+            #profile_nav a{
+                border: 2px solid red;
+                text-decoration: none;
+                flex: 1 0 135px;
+                margin: 23px 20px;
+                text-align: center;
+                font-size: 1.7em;
+                padding-top: .5em;
+            }
+            #profile_nav a:visited{
+                color: black;
+            }
+            #profile_nav a:link{
+                color: black;
+            }
+            #profile_nav img{
+                border: 2px solid red;
+                width: 24%;
+                margin: auto;
+                margin-top: .8em;
+                display: block;
+            }
+            #profile_nav #logo{
+                border: 2px solid red;
+                flex: 1 0 135px;
             }
 
             #profile_content_header{
@@ -128,11 +161,14 @@
         <!--Implementing CSS Grid-->
         <div id="profile_grid_container">
             <!--Grid items total of 4-->
-            <nav id="profile_nav">
-                <img src="" alt="">
-                <a href="">FAVORITES</a>
-                <a href="">OFFER LIST</a>
-                <a href="">PROFILE SETTINGS</a>
+            <nav id="profile_nav"> <!--Profile Nav Flex container-->
+                <div id="logo">
+                    <img src="img/logo.png" alt="mpls renters logo">
+                </div>
+                <a href="">Favorites</a>
+                <a href="">Offer List</a>
+                <a href="">Profile Settings</a>
+                <div id="notification"><img src="" alt=""></div>
             </nav>
             <section id="profile_content_header">
 
