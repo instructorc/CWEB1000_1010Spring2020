@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <head>
         <title>MPLS Renters - Renter Profile</title>
         <meta charset="UTF-8">
@@ -21,99 +23,179 @@
             article, aside, canvas, details, figcaption, figure, 
             footer, header, hgroup, menu, nav, section, summary,
             time, mark, audio, video {
-            margin:0;
-            padding:0;
-            border:0;
-            outline:0;
-            font-size:100%;
-            vertical-align:baseline;
-            background:transparent;
+
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
             }
 
             body {
-            line-height:1;
+                line-height:1;
             }
             #profile_top_section{
-                background-image: url(img/profile_bg_crop.jpg);
-                background-size: 100%;
                 width: 100%;
-                min-height: 400px;
+                height: 300px;
+                background-image: url(img/profile_bg_crop_filter.png);
+                background-size: 100%;
             }
+
             #profile_grid_container{
+
                 display: grid;
-                width: 90%;
-                margin: auto;
-                min-height: 900px;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: 1fr 1fr 4fr 2fr;
-                
+                grid-template-rows: .7fr .7fr 3fr 1fr;
+                height: 800px;
+                width: 95%;
+                margin: auto;
             }
+
             #profile_nav{
-                box-shadow: 3px 3px 12px #333;
+                display: flex;
+                border: 2px solid green;
                 grid-column-start: 1;
-                grid-column-end: 5;
+                grid-column-end: -1;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                box-shadow: 3px 3px 10px #333;
+             
             }
+
+            #profile_nav #notification{
+                border: 2px solid red;
+                flex: 1 0 135px;
+            }
+
+            #profile_nav a{
+                border: 2px solid red;
+                text-decoration: none;
+                flex: 1 0 135px;
+                margin: 23px 20px;
+                text-align: center;
+                font-size: 1.7em;
+                padding-top: .5em;
+            }
+            #profile_nav a:visited{
+                color: black;
+            }
+            #profile_nav a:link{
+                color: black;
+            }
+            #profile_nav img{
+                border: 2px solid red;
+                width: 24%;
+                margin: auto;
+                margin-top: .8em;
+                display: block;
+            }
+            #profile_nav #logo{
+                border: 2px solid red;
+                flex: 1 0 135px;
+            }
+
             #profile_content_header{
-                box-shadow: 3px 3px 12px #333;
+                display: flex;
                 grid-column-start: 1;
-                grid-column-end: 5;
+                grid-column-end: -1;
                 grid-row-start: 2;
                 grid-row-end: 3;
+                box-shadow: 3px 3px 10px #333;
+                height: 100px;
             }
+
+            #profile_content_header .profile_headers{
+                font-size: 2em;
+                flex: 1 0 300px;
+                margin: 4% 7%;
+            
+            }
+
             #profile_content_flexcontainer{
                 display: flex;
                 flex-wrap: wrap;
                 grid-column-start: 1;
-                grid-column-end: 5;
+                grid-column-end: -1;
                 grid-row-start: 3;
                 grid-row-end: 4;
-                min-height: 800px;
-                width: 100%;
-                box-shadow: 3px 3px 12px #333;
+                box-shadow: 3px 3px 10px #333;
+                height: 700px;
+            }
+
+            .profile_content{
+                flex: 1 0 300px;
+                box-shadow: 3px 3px 10px #333;
+                height: 700px;
+            }
+
+            /**Profile top section style rules**/
+            #profile_top_section p{
+                float: right;
+                margin: 20px 60px;
+                font-size: 1.2em;
+            }
+
+            #profile_header_data{
+                width: 440px;
+                height: 200px;
+                margin: auto;
+                padding-top: 60px;
+            }
+
+            #profile_header_data img{
+                width: 35%;
+                border-radius: 80px;
+                margin: auto;
+                display: block;
+            }
+
+            #profile_header_data h2{
+                font-size: 2.8em;
+                text-align: center;
+                margin-top: .4em;
+            }
+            .profile_headers{
+                font-size: 2em;
 
             }
-            .profile_content{
-                box-shadow: 3px 3px 12px #333;
-                flex: 1 0 400px;
-                min-height: 750px;
-            }
-            #tb_graphic_one{
-                grid-column-start: 1;
-                grid-column-end: 5;
-                grid-row-start: 4;
-                grid-row-end: 5;
-                min-height: auto;
-                width: 100%;
-                box-shadow: 3px 3px 12px #333;
-            }
+            
         
         </style>
     </head>
     <body>
-        <section id="profile_top_section">
-            <p>Monday July 24th, 2023  11:02am</p>
-            <div id="profile_intro">
-                <img src="" alt="profile picture">
-                <h1>Welcome, Mary Jane</h1>
-            </div>
+        <div id="profile_top_section">
+            <p>Sunday May 8, 2023 11:02am</p>
+            <section id="profile_header_data">
+                <img src="img/headshot_crop.jpg" alt="profile image">
+                <h2>Welcome Mary Jane</h2>
+            </section>
 
-        </section>
+        </div>
+        <!--Implementing CSS Grid-->
         <div id="profile_grid_container">
-            <nav id="profile_nav">
-                <!--<img src="" alt="mpls renters logo">
+            <!--Grid items total of 4-->
+            <nav id="profile_nav"> <!--Profile Nav Flex container-->
+                <div id="logo">
+                    <img src="img/logo.png" alt="mpls renters logo">
+                </div>
                 <a href="">Favorites</a>
                 <a href="">Offer List</a>
-                <a href="">Profile Setting</a>
-                <div id="profile_notification">
-                    <img src="" alt="profile_notification">
-                </div>-->
+                <a href="">Profile Settings</a>
+                <div id="notification"><img src="" alt=""></div>
             </nav>
             <section id="profile_content_header">
-
+                <section class="profile_headers">
+                    <h3>Offers</h3>
+                </section>
+                <section class="profile_headers">
+                    <h3>Overview</h3>
+                </section>
             </section>
+            <!--Implement flexbox-->
             <div id="profile_content_flexcontainer">
+                <!--Flex items-->
                 <div class="profile_content offers">
 
                 </div>
@@ -122,11 +204,10 @@
                 </div>
             </div>
             <div id="tb_graphic_one">
-                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 220"><defs><style>.cls-1{fill:#111;}.cls-2{font-size:26px;fill:#fff;font-family:Montserrat-Regular, Montserrat;}.cls-3{letter-spacing:0em;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:0.01em;}.cls-7{letter-spacing:0em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:-0.02em;}.cls-10{letter-spacing:-0.02em;}.cls-11{letter-spacing:-0.01em;}</style></defs><title>Artboard 1</title><polygon class="cls-1" points="0 126 687 126 642 208 0 208 0 126"/><polygon class="cls-1" points="730 126 683 208 714 208 761 126 730 126"/><polygon class="cls-1" points="764 126 717 208 788 208 841 126 764 126"/><polygon class="cls-1" points="844 126 790.5 208 817 208 868 126 844 126"/><text class="cls-2" transform="translate(47 173)">W<tspan class="cls-3" x="28.89" y="0">h</tspan><tspan x="46.54" y="0">e</tspan><tspan class="cls-4" x="62.24" y="0">r</tspan><tspan x="72.33" y="0">e a</tspan><tspan class="cls-5" x="110.19" y="0">p</tspan><tspan x="127.74" y="0">a</tspan><tspan class="cls-6" x="143.08" y="0">r</tspan><tspan x="153.89" y="0">t</tspan><tspan class="cls-7" x="164.45" y="0">m</tspan><tspan class="cls-8" x="192.09" y="0">ents ma</tspan><tspan class="cls-9" x="298.4" y="0">k</tspan><tspan class="cls-8" x="313.48" y="0">e </tspan><tspan class="cls-10" x="335.99" y="0">y</tspan><tspan class="cls-8" x="349.7" y="0">ou an of</tspan><tspan class="cls-11" x="455.18" y="0">f</tspan><tspan x="463.76" y="0">er</tspan></text></svg>
+
             </div>
 
-        </div><!--End of profile grid container-->
-
+        </div>
 
     </body>
 </html>

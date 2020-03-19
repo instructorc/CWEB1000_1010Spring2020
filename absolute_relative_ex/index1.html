@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!--HTML5 and rules will comply to and standards enforced-->
+<html lang="en"><!--Root tag : no other tags besides doctype should be found outside of the root html tag-->
+    <head>
+        <title>Absolute and Relative File Paths Worksheet</title>
+        <link rel="icon" href="https://1.bp.blogspot.com/-AZrUrfRGplQ/WiJOHzrTLVI/AAAAAAAAACo/Ml1q8n723CQ5IcI0LMpVh07fLNH25zaagCPcBGAYYCw/s200/HPE_LoadRunner_logo.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="description" content="Absolute and relative file worksheet for CWEB1010 ">
+        <meta name="keywords" content="Absolute File Path, Relative File Path, worksheet">
+        <meta name="author" content="C.Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--External CSS [project specific]-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        
+        <!--Internal CSS [page specific]-->
+        <style>
+            #box{
+                font-size: 3em;
+            }
+
+            #footer{
+                height: 90px;
+                background-image: url(img/dunwoodyfooterlogo.png);
+                background-size: 100%;
+            }
+
+            #header {
+                text-align: center;
+                margin-bottom: 22px;
+            }
+
+            img[src*="filestructure"]{
+                display: block;
+                margin: auto;
+                margin-top: 30px;
+            }
+
+            input[type="text"] {
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+                margin-left: 12px;
+                width: 50%;
+            }
+
+            #questions {
+                margin-top: 18px;
+                margin-left: 16px;
+                margin-bottom: 26px;
+            }
+
+            h1 {
+                font-size: 1.7em;
+                line-height: 1.2em;
+            }
+
+            h2 {
+                font-weight: 100;
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 1.1em;
+                font-weight: 700;
+                line-height: 1.2em;
+            }
+
+            hr {
+                size: 4px;
+                background-color: black;
+            }
+
+            li {
+                margin-top: 18px;
+            }
+
+            /**CSS style rules that allows for parenthesis after the number**/
+            ol{
+                counter-reset: list;
+            }
+
+            ol >li{
+                list-style: none;
+            }
+
+            ol >li:before{
+                content: counter(list)")  ";
+                counter-increment: list;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header id="header">
+                <h1>Course: CWEB1010 - Introduction to Web Development</h1>
+                <h1>Utilizing and Understanding Relative and Absolute File Paths</h1>
+                <!--Inline CSS [element or tag specific]-->
+                <h1 style="text-transform: uppercase;"> Term Spring 2020</h1>
+                <h2>Allotted Time: 10 minutes | Total points: 0 points | 5 questions</h2>
+
+            </header>
+            <p>Directions: This in-class assignment will focus on understanding relative and absolute file paths.  Please use the diagram below to fill in the correct file path for each of the 5 questions below.</p>
+            <a href="http://fire.org/downloads/farsite/WebHelp/tutorial/tutorial4_file_structure.htm" target="_blank"><img src="img/filestructure.PNG" alt="image of file structure"></a>
+            <hr>
+            <div id="questions">
+                <ol>
+                    <li>What is the relative file path to bg.jpg from index.html?<input type="text" size="30"></li>
+                    <li>What is the relative file path to logo.png file from index.html file?<input type="text" size="30"></li>
+                    <li>What is the relative file path to minimize.js from index.html file<input type="text" size="30"></li>
+                    <li>What is the relative file path to style.css from index.html?<input type="text" size="30"></li>
+                    <li>What is the relative file path to banner.jpg from contact.html file?<input type="text" size="30"></li>
+                </ol>
+            </div>
+            <footer id="footer">
+
+
+
+            </footer>
+        </div><!--End of closing body tag-->
+    </body>
+</html>
