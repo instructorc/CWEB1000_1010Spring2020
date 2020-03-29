@@ -1,0 +1,826 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none; 
+}
+ #navstruct a:after{
+    display:block;
+    content: '';
+    
+    transform: scaleX(0);  
+    transition: transform 350ms ease-in-out;
+}
+#navstruct a:hover:after{
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    transform: scaleX(.8); 
+    
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a[href="#apartment_search_block"]{
+    transition: all 4s;
+    
+}
+
+h2{
+    
+    font-size: 1.4em;
+    font-weight: 300;
+    
+}
+h3{
+    font-size: 2.8vw;
+    font-weight: 300;
+
+}
+h4{
+    text-align: center;
+}
+#headstruct{
+    width: 100%;
+    height: 60px;
+   
+}
+#footstruct{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+    width: 100%;
+    background-color: #eee;
+   
+}
+.footer_title h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 0px;
+    color: #0098B6;
+    text-transform: uppercase;
+
+}
+#footstruct .footer_links {
+    flex: 1 0 300px;
+    max-width: 375px;
+    margin-top: 10%;
+}
+.footer_links ul {
+    display: inline-block;
+    padding: 0;
+    margin: -44px 0px 0px -68px;
+  
+}
+.footer_title h3 ul li{
+    list-style-type: none;
+}
+section.footer_title {
+    text-align: right;
+    float: left;
+    transform: rotate(-90deg);
+    width: 100px;
+   
+    height: 25px;
+    width: 170px;
+    margin-top: 32px;
+}
+#footstruct .footer_links ul li{
+    list-style-type: none;
+}
+#banner{
+    width: 100%;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.block_contain{
+    display: flex;
+    width: 95%;
+    margin:auto;
+    margin-top: 10px;
+}
+
+/**Testimonial Section**/
+section.test_qoute{
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+}
+/**The container for the banner flex items**/
+#banner_contain{
+    display: flex;
+    width: 95%;
+    margin:auto;
+    margin-top: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#logo{
+   
+    height: 50px;
+    flex: 0 0 100px;
+}
+#logo a:hover{
+    transform: none;
+}
+#navstruct{
+    height: 50px;
+    flex: 3 0 500px;
+}
+#user_info{
+  
+    height: 50px;
+    flex: 0 0 250px;
+    
+}
+#listruct{
+    display: flex;
+    list-style-type: none;
+}
+/** Mobile Navigation Style rules**/
+#navstruct_mobile{
+   display: none;
+   flex: 3 0 500px;
+}
+#user_info_mobile{
+  display: none;
+  height: 50px;
+  flex: 0 0 300px;
+  
+}
+#listruct_mobile{
+    display: none;
+}
+#hamburger_icon{
+text-align: end;
+font-size: 2em;
+float: right;
+}
+
+#listruct li{
+    text-transform: uppercase;
+    flex: 0 0 130px;
+    text-align: center;
+}
+#user_info img{
+    margin: 0px 10px;
+}
+
+#user_info_mobile img{
+    margin: 0px 10px;
+}
+#user_info a {
+    display: block;
+    margin: 6%;
+    text-transform: uppercase;
+    text-align: right;
+}
+.banner_box{
+    flex: 1 0 305px;
+    height: 700px;
+    
+}
+.banner_box p {
+    font-size: .9em;
+    margin-top: 16px;
+    padding: 0px 50px;
+}
+.page_container{
+    width: 95%;
+    margin: auto;
+    height: 70px;
+}
+.banner_box #profile_signup{
+    color: white;
+    text-align: center;
+    width: 555px;
+    min-width: 60%;
+    height: 85%;
+    margin-left: auto;
+    padding: 2% 2% 5% 2%;
+    background-color: rgba(0, 0, 0, .7);
+}
+/**Form style rules**/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 85%;
+    height: 75%;
+    margin: auto;
+    margin-top: 2.5em;
+    text-align: left;
+    font-size: 1em;
+
+}
+
+#profile_signup form > input, select, button {
+    flex: 1 0 60%;
+    height: 25px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+}
+
+
+form > label {
+    flex: 0 0 100px;
+    min-width: 170px;
+   
+    
+}
+form > input, select {
+    font-size: 1.1em;
+    background-color:transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    height: 40px;
+    margin: 1%;
+    min-width: 170px;
+}
+
+select option {
+    margin: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+form >  button {
+    background-color:#0098B6;
+    font-size: 1.4em;
+    padding: 6%;
+    color: white;
+    height: auto;
+    text-transform: uppercase;
+    border: none;
+    transition: all 2s;
+}
+form > button:hover {
+    background-color:#1e7485;
+    
+}
+
+form #credentials {
+    background-color: rgba(255,255,255, .9);
+    width: 100%;
+    font-size: 1em;
+    font-weight: 900;
+    padding: 6%;
+    flex-wrap: wrap;
+    margin: 6% 0px;
+    color: black;
+    display: flex;
+}
+
+#credentials label {
+    flex: 1 0 141px;
+    height: 40px;
+    max-width: 132px;
+}
+
+#credentials input[type="password"] {
+    flex: 0 0 135px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#credentials input{
+    flex: 0 0 135px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+}
+form h5 {
+    margin-bottom: 4%;
+    text-transform: uppercase;
+    font-size: .9em;
+    text-align: center;
+    font-weight: 900;
+    color: #888787;
+
+}
+
+/**Apartment section style rules**/
+
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    height: 155px;
+    width: 80%;
+    padding: 1%;
+   
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#filter select{
+    color: black;
+    max-width: 300px;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
+    font-weight: 900;
+    border-bottom: 2px solid black;
+}
+#filter label{
+    font-weight: 900;
+    flex: 1 0 400px;
+}
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #0098B6;
+    cursor: pointer;
+}
+
+
+#apartment_search_block{
+    background-color: #eee;
+    width: 100%;
+    padding: 5% 0%;
+    margin-top: 6em;
+    text-align: center;
+    
+    
+}
+#apartment_search_block h3{
+    line-height: 262px;
+}
+#apartment_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.apart_struct{
+    flex: 1 0 470px;
+    
+    height: 700px;
+}
+#map{
+    width: 100%;
+    height: 700px;
+}
+
+#apart_boxes img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width: 50%;
+    justify-self: center;
+}
+#apart_boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#apart_boxes img{
+    height: 85px;
+    flex: 1 0 145px;
+    max-width: 150px;
+    object-fit: contain;
+    transition: all 3s;
+    margin-bottom: 6%;
+    
+}
+
+/*img[data-id="1"]{
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+img[data-id="2"]{
+    grid-column: 1;
+    grid-row: 1
+    
+}
+img[data-id="3"]{
+    grid-column: 3;
+    grid-row: 1;
+    
+}
+img[data-id="4"]{
+    grid-column: 4;
+    grid-row:1
+}
+img[data-id="5"]{
+    grid-column: 1;
+    grid-row: 2;
+    
+}*/
+
+
+
+/**Carousel**/
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 760px; /* height of carousel */
+ 
+  }
+/**Implementing CSS Grid**/
+#grid_container{
+    display: grid;
+    width: 100%;
+   
+    grid-template-areas: "graphic_one graphic_one graphic_one"
+                        "upscale luxury elegant"
+                        "graphic_two graphic_two graphic_two";
+    grid-column-gap: 20px;
+    grid-row-gap: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    
+
+}
+
+
+
+
+#tb_graphic_one{
+    grid-area: graphic_one;
+}
+#tb_graphic_two{
+    grid-area: graphic_two;
+}
+
+#upscale{
+    grid-area: upscale;
+}
+#luxury{
+    grid-area: luxury;
+}
+#elegant{
+    grid-area: elegant;
+}
+
+/**Implementing inner boxes for grid**/
+.grid_box{
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin: auto;
+    height: 275px;
+    
+
+}
+.grid_box p{
+    display: none;
+}
+.grid_box h3{
+    line-height: 262px;
+}
+.grid_box:hover h3{
+    display: none;
+}
+
+.grid_box:hover p{
+    padding:80px 10px 0px 10px;
+    display: block;
+    line-height: 1.5em;
+}
+
+.upscale_img{
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/upscale.jpg);
+    background-size: cover;
+    transition: all .2s ease-in-out;
+    
+}
+
+.upscale_img:hover{
+    transform: scale(1.1);
+    background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../images/upscale.jpg);
+    background-size: cover;
+    font-size: 1.8vw;
+}
+
+
+.luxury_img{
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/luxury.jpg);
+    background-size: cover;
+    transition: all .2s ease-in-out;
+}
+.luxury_img:hover{
+    transform: scale(1.1);
+    background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../images/luxury.jpg);
+    background-size: cover;
+    font-size: 1.8vw;
+}
+.elegant_img{
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/elegant.jpg);
+    background-size: cover;
+    transition: all .2s ease-in-out;
+}
+.elegant_img:hover{
+    transform: scale(1.1);
+    background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../images/elegant.jpg);
+    background-size: cover;
+    font-size: 1.8vw;
+}
+
+#testimonial{
+    
+    width: 100%;
+    margin-top: 7em;
+}
+
+#logo img{
+    max-width: 100%;
+    /* object-fit: contain; */
+    height: 100%;
+
+}
+#user_info img{
+    max-width: 100%;
+    /* object-fit: contain; */
+    height: 48%;
+    float: right;
+    margin: 14px;
+
+}
+
+
+
+/**Auth Page **/
+#section_one{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width: 100%;
+    background-image: url(../images/apartment_interior.png);
+    background-size: cover;
+}
+#flex_contain{
+    display: flex;
+    background-color: rgba(0,0,0, .6);
+    max-width: 1300px;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.auth_top{
+    background-color: #4B4B4B;
+    flex: 1 0 250px;
+    height: 100px;
+    border-right: 2px solid #5a5a5a;
+
+}
+.auth_top:hover {
+    background-color: white;
+    
+}
+
+.auth_top h2{
+    color: white;
+    text-align: center;
+    padding: 35px 0px;
+}
+.auth_top h2:hover{
+    color: black;
+}
+.auth_info{
+    color: white;
+    padding: 3% 3%;
+    flex: 1 0 43%;
+}
+
+.auth_info h2{
+    font-size: 1.6em;
+    color: white;
+    font-weight: 500;
+    padding-top: 7%;
+}
+.auth_info p{
+    font-size: 1.25em;
+    color: white;
+    font-weight: 300;
+    padding: 7px 20px 5px 0px;
+    
+}
+
+#auth_form{
+
+}
+
+#agent_sign_up_form{
+    
+}
+
+
+
+/**GRID STYLE RULES **/
+#section_two_grid{
+    display: grid;
+    height: 900px;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 1fr 1fr;
+}
+
+#auth_box_one{
+    grid-row: 2;
+    grid-column: 1;
+    width: 600px;
+    margin: auto;
+    height: 400px;
+    border: 3px solid red;
+}
+#auth_box_two{
+    grid-column: 2;
+    grid-row: 2;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    border: 3px solid blue;
+}
+#auth_bottom_graphic{
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row: 3;
+    width: 100%;
+    height: 250px;
+}
+
+#user_info img:hover{
+    animation: flash 3s;
+}
+
+
+
+
+
+
+
+
+/**Implementing Media Query for 1024 breakpoint**/
+@media screen and (max-width: 1024px){
+    /**Hide default navigation**/
+    #navstruct{
+       display: none;
+    }
+    #user_info{
+        display: none;
+    }
+    
+    #navstruct_mobile{
+        display: block;
+        flex: 3 0 200px;
+        
+    }
+    #headstruct{
+        position: sticky;
+        background-color: white;
+        
+        top: 0;
+    }
+    #listruct_mobile{
+        display: none;
+        color: white;
+        position: fixed;
+        height: 100%;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 152, 182, 0.623);
+        top: 55px;
+        transition: opacity 1s;
+        overflow: auto;
+        
+    }
+    #listruct_mobile a:visited, a:link{
+        
+        color: white
+    }
+    #listruct_mobile li{
+
+        width: 200px;
+        margin: auto;
+        padding: .5em;
+        list-style-type: none;
+        font-size: 2em;
+        font-weight: bolder;
+
+    }
+    .banner_box:first-child {
+        display:none;
+    }
+    .banner_box #profile_signup {
+        margin-left: none;
+        margin: auto;
+    }
+    #grid_container{
+        grid-column-gap: 0px;
+        grid-row-gap: 46px;
+    }
+    
+}
+
+/**Implementing Media Query for 1024 breakpoint**/
+@media screen and (max-width: 768px){
+    
+    #footstruct .footer_links {
+
+        margin-top: 25%;
+        height: 135px;
+    }
+    
+    .banner_box #profile_signup {
+        width: auto;
+
+    }
+    
+    h3{
+        font-size: 7.8vw;
+
+    }
+    
+    /**Implementing CSS Grid**/
+    #grid_container{
+        grid-template-areas: 
+                            "upscale upscale upscale"
+                            "luxury luxury luxury"
+                            "elegant elegant elegant";
+                            
+    }
+
+    .grid_box:hover p {
+        font-size: 5vw;
+    }
+    
+    .upscale_img {
+        margin-top: 60px;
+    }
+                    
+    
+}

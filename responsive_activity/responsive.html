@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Responsive Activity</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #container{
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+            }
+            #box_one{
+                flex: 1 0 250px;
+                height: 500px;
+                border: 3px solid black;
+            }
+            #box_two{
+                flex: 1 0 250px;
+                height: 500px;
+                border: 3px solid black;
+            }
+            #box_three{
+                flex: 1 0 250px;
+                height: 500px;
+                border: 3px solid black;
+            }
+            #box_four{
+                flex: 1 0 250px;
+                height: 500px;
+                border: 3px solid black;
+            }
+            h1{
+                font-family:arial;
+                font-weight: 900;
+                font-size: 2em;
+                text-align: center;
+                padding-top: 20%;
+                color: #333;
+            }
+
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                #box_two{
+                    display: none;
+                }
+                #box_one, #box_two, #box_three, #box_four{
+                    border: none;
+                    box-shadow: 2px 2px 10px #333;
+                }
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+                #box_one, #box_two, #box_three, #box_four{
+                    height: 375px;
+                }
+
+                #box_one{
+                    background-color: red;
+                }
+
+
+                #box_three{
+                    background-color: yellow;
+                }
+
+                #box_four{
+                    background-color: blue;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="container">
+            <section id="box_one"> <h1>BOX 1</h1></section>
+            <section id="box_two"><h1>BOX 2</h1></section>
+            <section id="box_three"><h1>BOX 3</h1></section>
+            <section id="box_four"><h1>BOX 4</h1></section>
+        </div>
+    </body>
+</html>
