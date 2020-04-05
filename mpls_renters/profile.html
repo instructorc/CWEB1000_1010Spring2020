@@ -164,6 +164,29 @@
                 background-color: rgba(77, 238, 77, 0.678);
                 margin: 2% auto;
             }
+
+
+            .aoffer{
+                box-shadow: 7px 5px 7px #aaa;
+                background-color: #eee;
+                padding: 2%;
+                margin: 3% 0%;
+                min-height: 130px;
+            }
+            .aoffer #offer_property {
+                text-transform: uppercase;
+                float: left;
+                
+            }
+            .aoffer #offer_exp{
+                text-transform: uppercase;
+                float: right;
+                color: #1A578C;
+            }
+            .aoffer #offer_details{
+                clear: both;
+                margin-top: 5%;
+            }
             #profile_suggestions{
                 width: 80%;
                 height: 315px;
@@ -243,12 +266,17 @@
                 <!--Flex items-->
                 <div class="profile_content offers">
                     <section id="profile_offer">
-                        <h3>Offers</h3>
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: 365 Nicolette</h5>
+                            <h5 id="offer_exp">Offer Exp. Aug. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
                     </section>
                 </div>
                 <div class="profile_content data">
                     <section id="profile_suggestions">
-                        <h3>Suggested Properties</h3>
+                        <h3>Suggestions</h3>
                     </section>
                     <section id="profile_task">
                         <h3>Task</h3>
