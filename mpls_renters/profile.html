@@ -46,29 +46,29 @@
 
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: .7fr .7fr 3fr;
+                grid-template-rows: 125px 100px 3fr;
                 width: 90%;
                 margin: auto;
             }
 
             #profile_nav{
                 display: flex;
-                border: 2px solid green;
+                
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 1;
                 grid-row-end: 2;
-                box-shadow: 3px 3px 10px #333;
-                height: 100px;
+                
+                min-height: 100px;
             }
 
             #profile_nav #notification{
-                border: 2px solid red;
+                
                 flex: 1 0 135px;
             }
 
             #profile_nav a{
-                border: 2px solid red;
+                
                 text-decoration: none;
                 flex: 1 0 135px;
                 margin: 23px 20px;
@@ -83,26 +83,32 @@
                 color: black;
             }
             #profile_nav img{
-                border: 2px solid red;
+                
                 width: 24%;
+                min-width: 50px;
                 margin: auto;
                 margin-top: .8em;
                 display: block;
             }
             #profile_nav #logo{
-                border: 2px solid red;
+                
                 flex: 1 0 135px;
             }
 
             #profile_content_header{
                 display: flex;
+                flex-wrap: wrap;
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 2;
                 grid-row-end: 3;
-                box-shadow: 3px 3px 10px #333;
+                
                 height: 100px;
             }
+
+            #profile_content_header:nth-child(2n+1) { 
+                color: lime;
+                }
 
             #profile_content_flexcontainer{
                 display: flex;
@@ -111,13 +117,13 @@
                 grid-column-end: -1;
                 grid-row-start: 3;
                 grid-row-end: 4;
-                box-shadow: 3px 3px 10px #333;
+                
                 
             }
 
             .profile_content{
-                flex: 1 0 300px;
-                box-shadow: 3px 3px 10px #333;
+                flex: 1 0 400px;
+                
                 
             }
 
@@ -156,12 +162,11 @@
             .profile_headers h3 {
                 font-size: 1.2em;
                 font-weight: 300;
-                margin: 5% 13%;
+                margin: 5% 10%;
             }
             #profile_offer{
                 width: 80%;
                 height: 640px;
-                background-color: rgba(77, 238, 77, 0.678);
                 margin: 2% auto;
             }
 
@@ -178,6 +183,10 @@
                 float: left;
                 
             }
+            .aoffer p{
+                line-height: 20px;
+
+            }
             .aoffer #offer_exp{
                 text-transform: uppercase;
                 float: right;
@@ -186,17 +195,18 @@
             .aoffer #offer_details{
                 clear: both;
                 margin-top: 5%;
+                margin-bottom: 4px;
             }
             #profile_suggestions{
                 width: 80%;
                 height: 315px;
-                background-color: rgba(255, 255, 0, 0.774);
+                box-shadow: 7px 5px 7px #aaa;
                 margin: 2% auto;
             }
             #profile_task{
                 width: 80%;
                 height: 315px;
-                background-color: rgba(255, 0, 0, 0.658);
+                box-shadow: 7px 5px 7px #aaa;
                 margin: 2% auto;
             }
             #profile_tb_graphic_one {
@@ -208,13 +218,45 @@
                 #profile_nav{
                     background-color: orangered;
                 }
+                #profile_top_section {
+
+                    background-size: cover;
+                }
+                .aoffer #offer_exp {            
+                    float: left;
+                    margin: 5px 0px;
+                }
+                .profile_overview_heading{
+                    display: none;
+                }
 
             }
             /* smaller than 768 pixels */
             @media screen and (max-width: 768px) {
+                #profile_grid_container{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: auto 100px 3fr;
+                    width: 90%;
+                    margin: auto;
+                }
                 #profile_nav{
                     background-color: blue;
+                    flex-wrap: wrap;
                 }
+                #profile_nav a {
+
+                    flex: 1 0 305px;
+   
+                }
+                #profile_nav img {
+
+                    display: none;
+                }
+                #profile_nav #notification {
+                    display: none;
+                }
+
             }
             /* smaller than 480 pixels */
             @media screen and (max-width: 480px) {
@@ -231,6 +273,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <!--External Google font CDN link-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     </head>
     <body>
         <div id="profile_top_section">
@@ -251,13 +294,13 @@
                 <a href="">Favorites</a>
                 <a href="">Offer List</a>
                 <a href="">Profile Settings</a>
-                <div id="notification"><img src="" alt=""></div>
+                <div id="notification"><img src="img/notification_icon.PNG" style="width: 0%; margin-top: 26px;" alt="notification symbol" class="animated infinite bounce"></div>
             </nav>
             <section id="profile_content_header">
                 <section class="profile_content profile_headers">
                     <h3>Offers</h3>
                 </section>
-                <section class="profile_content profile_headers">
+                <section class="profile_content profile_headers profile_overview_heading">
                     <h3>Overview</h3>
                 </section>
             </section>
@@ -269,6 +312,18 @@
                         <section class="aoffer">
                             <h5 id="offer_property">Property: 365 Nicolette</h5>
                             <h5 id="offer_exp">Offer Exp. Aug. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: Latitude 45</h5>
+                            <h5 id="offer_exp">Offer Exp. Aug. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: Nord Haus</h5>
+                            <h5 id="offer_exp">Offer Exp. SEPT. 30, 2023</h5>
                             <h6 id="offer_details">Offer Details</h6>
                             <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
                         </section>
