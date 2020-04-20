@@ -67,10 +67,20 @@
                 margin-top: .4em;
                 font-weight: 100;
             }
+
+            .profile_headers{
+                font-size: 2em;
+
+            }
+            .profile_headers h3 {
+                font-size: 1.2em;
+                font-weight: 300;
+                margin: 5% 10%;
+            }
             #profile_grid_container{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: .7fr .7fr 3fr;
+                grid-template-rows: 125px 100px 3fr;
                 width: 90%;
                 margin: auto;
             }
@@ -99,6 +109,11 @@
             #profile_nav a:link{
                 color: black;
             }
+            #profile_nav #notification{
+                
+                flex: 1 0 135px;
+            }
+
             #profile_nav img {
                 width: 24%;
                 border: 2px solid orangered;
@@ -119,14 +134,9 @@
             .profile_content {
                 border: 2px solid green;
                 flex: 1 0 400px;
-                font-size: 2em;
+            
             }
 
-            .profile_content h3{
-                font-weight: 300;
-                margin: 5% 15%;
-                font-size: 1.2em;
-            }
             #profile_content_flexcontainer{
                 display: flex;
                 border: 2px solid blue;
@@ -134,16 +144,94 @@
                 grid-column-end: -1;
                 grid-row-start: 3;
                 grid-row-end: 4;
-                height: 600px;
+           
             }
             .offers{
                 background-color: orange;
+            }
+            #profile_offer{
+                width: 80%;
+                height: 640px;
+                margin: 2% auto;
+            }
+
+            .aoffer{
+                box-shadow: 7px 5px 7px #aaa;
+                background-color: #eee;
+                padding: 2%;
+                margin: 3% 0%;
+                min-height: 130px;
+         
+            }
+
+            .aoffer #offer_property {
+                text-transform: uppercase;
+                float: left;
+                
+            }
+            .aoffer p{
+                line-height: 20px;
+
+            }
+            .aoffer #offer_exp{
+                text-transform: uppercase;
+                float: right;
+                color: #1A578C;
+            }
+            .aoffer #offer_details{
+                clear: both;
+                margin-top: 5%;
+                margin-bottom: 4px;
+            }
+            #profile_suggestions{
+                width: 80%;
+                height: 315px;
+                box-shadow: 7px 5px 7px #aaa;
+                margin: 2% auto;
+            }
+            #profile_task{
+                width: 80%;
+                height: 315px;
+                box-shadow: 7px 5px 7px #aaa;
+                margin: 2% auto;
+            }
+            #profile_tb_graphic_one {
+                margin: -55px 0px 60px 0px;
             }
 
             .data{
                 background-color: red;
             }
+
+            #profile_tb_graphic_one {
+                margin: -55px 0px 60px 0px;
+            }
+
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                #profile_nav{
+                    background-color: #cd0000;
+                }
+                #profile_header_data {
+                    display: none;
+                }
+            
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+                #profile_nav{
+                    background-color: #eeff22;
+                }
+            }
+            /* smaller than 480 pixels */
+            @media screen and (max-width: 580px) {
+                #profile_nav{
+                    background-color: #09ff00;
+                }
+            }
         </style>
+        <!--Link to external CSS-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <!--External Google font CDN link-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
     </head>
@@ -165,32 +253,95 @@
                 <a href="">Favorites</a>
                 <a href="">Offer List</a>
                 <a href="">Profile Settings</a>
-                <div id="notification"><img src="" alt="notication"></div>
+                <div id="notification"><img src="img/notification_icon.PNG" style="width: 20%; margin-top: 26px;" alt="notication"></div>
             </nav>
             <section id="profile_content_header">
-                <section class="profile_content">
+                <section class="profile_content profile_headers">
                     <h3>Offers</h3>
                 </section>
-                <section class="profile_content">
+                <section class="profile_content profile_headers">
                     <h3>Overview</h3>
                 </section>
             </section>
             <!--Implementing CSS Flexbox-->
             <div id="profile_content_flexcontainer">
                 <div class="profile_content offers">
-                    <h4>Offers</h4>
+                    <section id="profile_offer">
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: 365 Nicolette</h5>
+                            <h5 id="offer_exp">Offer Exp. Aug. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: Latitude 45</h5>
+                            <h5 id="offer_exp">Offer Exp. Aug. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
+                        <section class="aoffer">
+                            <h5 id="offer_property">Property: Nord Haus</h5>
+                            <h5 id="offer_exp">Offer Exp. SEPT. 30, 2023</h5>
+                            <h6 id="offer_details">Offer Details</h6>
+                            <p>We are offering 2 months free rental for 12 month lease.  We have an opening for June, July and August</p>
+                        </section>
+                    </section>
                 </div>
                 <div class="profile_content data">
-                    <h4>Suggestions</h4>
+                    <section id="profile_suggestions">
+                        <h3>Suggestions</h3>
+                    </section>
+                    <section id="profile_task">
+                        <h3>Task</h3>
+                    </section>
 
                 </div>
             </div>
         </div>
         <!--End of CSS Grid container-->
         <div id="profile_tb_graphic_one">
-
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 220"><defs><style>.cls-1{fill:#111;}.cls-2{font-size:26px;fill:#fff;font-family:Montserrat-Regular, Montserrat;}.cls-3{letter-spacing:0em;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:0.01em;}.cls-7{letter-spacing:0em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:-0.02em;}.cls-10{letter-spacing:-0.02em;}.cls-11{letter-spacing:-0.01em;}</style></defs><title>Artboard 1</title><polygon class="cls-1" points="0 126 687 126 642 208 0 208 0 126"/><polygon class="cls-1" points="730 126 683 208 714 208 761 126 730 126"/><polygon class="cls-1" points="764 126 717 208 788 208 841 126 764 126"/><polygon class="cls-1" points="844 126 790.5 208 817 208 868 126 844 126"/><text class="cls-2" transform="translate(47 173)">W<tspan class="cls-3" x="28.89" y="0">h</tspan><tspan x="46.54" y="0">e</tspan><tspan class="cls-4" x="62.24" y="0">r</tspan><tspan x="72.33" y="0">e a</tspan><tspan class="cls-5" x="110.19" y="0">p</tspan><tspan x="127.74" y="0">a</tspan><tspan class="cls-6" x="143.08" y="0">r</tspan><tspan x="153.89" y="0">t</tspan><tspan class="cls-7" x="164.45" y="0">m</tspan><tspan class="cls-8" x="192.09" y="0">ents ma</tspan><tspan class="cls-9" x="298.4" y="0">k</tspan><tspan class="cls-8" x="313.48" y="0">e </tspan><tspan class="cls-10" x="335.99" y="0">y</tspan><tspan class="cls-8" x="349.7" y="0">ou an of</tspan><tspan class="cls-11" x="455.18" y="0">f</tspan><tspan x="463.76" y="0">er</tspan></text></svg>
         </div>
+        <footer id="footstruct">
 
+            <div class="footer_links">
+            <section class="footer_title">
+                <h3>Contact Us</h3>
+            </section>
+                <ul>
+                    <li>1.815.277.9239</li>
+                    <li>info@mplsrenters.com</li>
+                    <li>catch us @mplsrenters</li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+            <section class="footer_title">
+                <h3>Services</h3>
+            </section>
+                <ul>
+                    <li><a href="">Advertise</a></li>
+                    <li><a href="">Agent services</a></li>
+                    <li><a href="">Referrals</a></li>
+                    <li><a href="">Corporate Leasing</a></li>
+                    <li><a href="">Open Houses</a></li>
+                    <li><a href="">Renters Insurance</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+                <section class="footer_title">
+                    <h3>Information</h3>
+                </section>
+                <ul>
+                    <li>About MPLS Renters</li>
+                    <li>Leadership</li>
+                    <li>Terms and Agreements</li>
+                    <li>Media</li>
+                </ul>
+            </div>
+            
+        </footer>
 
     </body>
 
