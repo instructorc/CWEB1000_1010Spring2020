@@ -28,7 +28,7 @@ html, body, div, span, object, iframe,
             }
             a:after{
                 display:block;
-                content: '';
+              
                 
                 transform: scaleX(0);  
                 transition: transform 350ms ease-in-out;
