@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Examle of using JS to add two numbers</title>
+        <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    </head>
+    <body>
+        <form>
+            <label>Enter a number:</label>
+            <input type="text" size="4" placeholder="Please enter first number">
+            <label>Enter another number:</label>
+            <input type="text" size="4" id="secondNumber" placeholder="Please enter second number">
+            <button class="mdc-button foo-button" id="submitbutton">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">Button</span>
+            </button>
+
+        </form>
+        <h2 id="output"></h2>
+
+
+        <!--JS Internal Implementation-->
+        <script>
+
+
+            document.getElementById('submitbutton').addEventListener('click', addNumbers);
+
+
+            function addNumbers(){
+                event.preventDefault();
+                var allInputElements = document.getElementsByTagName('input');
+                var firstNumber = allInputElements[0].value;
+                
+
+                var secondNumber = document.getElementById('secondNumber').value;
+
+                var total;
+
+                total = parseInt(firstNumber) + parseInt(secondNumber);
+
+                document.getElementById('output').innerHTML = total;
+                if(total > 15){
+                    document.body.style.backgroundImage = "url(fireworks.gif)";
+                }
+
+
+            }
+
+        </script>
+    </body>
+</html>
