@@ -36,7 +36,7 @@
             #profile_top_section{
                 width: 100%;
                 height: 300px;
-                border: 2px solid black;
+
                 background-image: url("img/profile_bg_crop_filter.png");
                 background-size: 100%;
             }
@@ -47,7 +47,7 @@
             }
             #profile_header_data {
                 min-width: 452px;
-                border: 2px solid green;
+
                 max-width: 452px;
                 height: 200px;
                 margin: auto;
@@ -88,7 +88,6 @@
             #profile_nav{
                 display: flex;
                 flex-wrap: wrap;
-                border: 2px solid green;
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 1;
@@ -96,10 +95,12 @@
              
              
             }
+            #profile_logo{
+                width: 13%;
+            }
             #profile_nav a {
                 flex: 1 0 110px;
-                
-                border: 2px solid orangered;
+
                 text-align: center;
                 margin: 23px 5px;
                 font-size: 1.7em;
@@ -121,7 +122,7 @@
 
                 width: 24%;
                 max-width: 83px;
-                border: 2px solid orangered;
+          
                 margin-top: .8em;
                 display: block;
                 margin: auto;
@@ -129,7 +130,7 @@
             #profile_content_header{
                 display:flex;
                 flex-wrap: wrap;
-                border: 2px solid red;
+           
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 2;
@@ -138,7 +139,7 @@
 
             }
             .profile_content {
-                border: 2px solid green;
+            
                 flex: 1 0 400px;
             
             }
@@ -146,7 +147,7 @@
             #profile_content_flexcontainer{
                 display: flex;
                 flex-wrap: wrap;
-                border: 2px solid blue;
+      
                 grid-column-start: 1;
                 grid-column-end: -1;
                 grid-row-start: 3;
@@ -154,7 +155,7 @@
            
             }
             .offers{
-                background-color: orange;
+           
             }
             #profile_offer{
                 width: 80%;
@@ -162,13 +163,19 @@
                 margin: 2% auto;
             }
 
+            /**Initial State **/
             .aoffer{
                 box-shadow: 7px 5px 7px #aaa;
                 background-color: #eee;
                 padding: 2%;
                 margin: 3% 0%;
                 min-height: 130px;
-         
+                transition: all .2s ease-in-out;
+            }
+
+            /**End State**/
+            .aoffer:hover{
+                transform: scale(1.1);
             }
 
             .aoffer #offer_property {
@@ -207,7 +214,7 @@
             }
 
             .data{
-                background-color: red;
+              
             }
 
             #profile_tb_graphic_one {
@@ -217,7 +224,7 @@
             /* smaller than 1024 pixels */
             @media screen and (max-width: 1024px) {
                 #profile_nav{
-                    background-color: #cd0000;
+        
                 }
                 #profile_top_section {
 
@@ -229,7 +236,7 @@
             /* smaller than 768 pixels */
             @media screen and (max-width: 768px) {
                 #profile_nav{
-                    background-color: #eeff22;
+              
                 }
 
 
@@ -237,19 +244,28 @@
                     flex: 1 0 400px;
 
                 }
-                #profile_nav img {
+                #profile_logo{
                     display: none;
+                }
+                #profile_nav #notification {
+                    display: none;
+                }
+                .aoffer #offer_exp {
+                    float: left;
+
                 }
             }
             /* smaller than 480 pixels */
             @media screen and (max-width: 580px) {
                 #profile_nav{
-                    background-color: #09ff00;
+      
                 }
             }
         </style>
         <!--Link to external CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+
         <!--External Google font CDN link-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
     </head>
@@ -266,12 +282,12 @@
             <!--Flex container-->
             <nav id="profile_nav">
                 <div id="profile_logo">
-                    <img src="img/logo.png" style="width: 32%; margin-top: 26px;" alt="mpls renters logo">
+                    <img src="img/logo.png" style="width: 54px; margin-top: 12px;" alt="mpls renters logo">
                 </div>
                 <a href="">Favorites</a>
                 <a href="">Offer List</a>
                 <a href="">Profile Settings</a>
-                <div id="notification"><img src="img/notification_icon.PNG" style="width: 32%; margin-top: 26px;" alt="notication"></div>
+                <div id="notification"><img src="img/notification_icon.PNG" class="animated infinite heartBeat" style="width: 40px; margin-top: 26px;" alt="notication"></div>
             </nav>
             <section id="profile_content_header">
                 <section class="profile_content profile_headers">
