@@ -24,10 +24,7 @@
         <script>
 
 
-            document.getElementById('submitbutton').addEventListener('click', addNumbers);
-
-            //Defining the function
-            function addNumbers(){
+            document.getElementById('submitbutton').addEventListener('click', () =>{
                 event.preventDefault();
                 var allInputElements = document.getElementsByTagName('input');
                 var firstNumber = allInputElements[0].value;
@@ -42,10 +39,15 @@
                 document.getElementById('output').innerHTML = total;
                 if(total > 15){
                     document.body.style.backgroundImage = "url(fireworks.gif)";
+                    var groceryList = ["Bananas", "Oranges","Apples"];
+
+                    groceryList.forEach(x => console.log(groceryList[x]));  
                 }
 
 
-            }
+            })
+
+       
 
         </script>
     </body>
